@@ -18,6 +18,7 @@ namespace Processhighlevel
         static void Main(string[] args)
         {
 #if DEBUG
+            // File must be named flashplayer_31_sa
             Regex regex = new Regex(@"(?<![\w\d])flashplayer(_([0-9]+)_sa)*(?![\w\d])");
             // Get all processes and use Linq to filter on the regex pattern
             var processes = Process.GetProcesses().Where(p => regex.IsMatch(p.ProcessName));
@@ -35,8 +36,6 @@ namespace Processhighlevel
                
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine("Set Priority for id: " + proc.Id + " to " + newPriority.ToString());
-                Console.WriteLine("Enjoy!");
-                Console.WriteLine("Created by Citydrifter :)");
                 proc.PriorityClass = newPriority;
              
 #if DEBUG
