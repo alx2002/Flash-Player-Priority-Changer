@@ -8,9 +8,10 @@ using System.Text.RegularExpressions;
 namespace Processhighlevel
 {
 
-    class PUBG_RealTime
+    class Find_Process
     {
-        static ProcessPriorityClass newPriority = ProcessPriorityClass.High;
+        static ProcessPriorityClass newPriority = ProcessPriorityClass.High; //
+        
 
         static void Main(string[] args)
         {
